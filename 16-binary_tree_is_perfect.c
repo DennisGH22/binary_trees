@@ -9,8 +9,7 @@
 
 size_t binary_tree_height(const binary_tree_t *tree)
 {
-	size_t left_height = 0,
-	right_height = 0;
+	size_t left_height = 0, right_height = 0;
 
 	if (tree == NULL)
 		return (0);
@@ -30,10 +29,12 @@ size_t binary_tree_height(const binary_tree_t *tree)
 
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
+	size_t height = 0;
+
 	if (tree == NULL)
 		return (0);
 
-	size_t height = binary_tree_height(tree);
+	height = binary_tree_height(tree);
 
 	return (is_perfect_recursive(tree, height, 0));
 }
